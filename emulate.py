@@ -2,8 +2,8 @@ import os
 import subprocess
 
 # Set the directory where your exe files are located
-data = 'D:\\s08\\speakeasy\\data'  # e.g., "D:\\s08\\speakeasy\\exefolder"
-reports = 'D:\\s08\\speakeasy\\reports'  # Optional, can save reports to a different folder
+data = 'D:\\spl3\\speakeasy\\data'  # e.g., "D:\\s08\\speakeasy\\exefolder"
+reports = 'D:\\spl3\\speakeasy\\reports'  # Optional, can save reports to a different folder
 
 # Ensure output folder exists
 if not os.path.exists(reports):
@@ -13,7 +13,7 @@ if not os.path.exists(reports):
 for filename in os.listdir(data):
     if filename.endswith(".exe"):
         exe_path = os.path.join(data, filename)
-        report_name = f"{os.path.splitext(filename)[0]}_report.txt"
+        report_name = f"{os.path.splitext(filename)[0]}.txt"
         report_path = os.path.join(reports, report_name)
 
         # Run the emulator and generate report
